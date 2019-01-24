@@ -39,7 +39,6 @@ module.exports = {
 
     update: (req, res) => {
         const db = req.app.get('db')
-        console.log(req.query.desc)
 
         db.update_product(req.params.product_id, req.query.desc)
             .then((data) => res.status(200).json(data))
